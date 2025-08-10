@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Task creation and removal logic
+        // Task creation and removal logic - Updated to use className
         // Create a new li element
         const listItem = document.createElement('li');
         listItem.textContent = taskText;
         
-        // Create a remove button
+        // Create a remove button - Using className as required
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.className = 'remove-btn';
+        removeButton.className = 'remove-btn';  // Using className instead of classList.add
         
         // Assign onclick event to remove the task
         removeButton.onclick = function() {
@@ -54,5 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             addTask();
         }
     });
+    
+    // Optional: Focus on input field when page loads
     taskInput.focus();
 });
