@@ -60,8 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ---------- 5. Event listeners ---------- */
     addButton.addEventListener('click', () => addTask());
-    taskInput.addEventListener('keypress', e => {
-        if (e.key === 'Enter') addTask();
+    taskInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            addTask();
+        }
     });
 
     /* ---------- 6. Focus ---------- */
